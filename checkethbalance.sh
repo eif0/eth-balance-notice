@@ -17,7 +17,6 @@ path="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 script="python3 $path/checkethbalance.py -a "$addr
 current_balance=$($script)
 
-
 if [ "$balance" != "$current_balance" ]
 then
 	zenity --error --text="BALANCE MODIFIED!!!!\nNEW BALANCE: "$balance

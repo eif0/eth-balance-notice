@@ -14,6 +14,7 @@ if (opts == []):
 for code,param in opts:
 	if code in ["-a","--account"]:
 		 account = param
+
 url='https://etherchain.org/api/account/'+account
 req = requests.get(url)
 content = req.json()

@@ -1,6 +1,7 @@
 ## [eth-balance-notice](https://github.com/eif0/eth-balance-notice/) - Ethereum balance monitor
 
 #### Usage
+
 * In order to monitor an ethereum address:
 	* ``$ ./checkethbalance.sh  -a [address] -b [balance]``
 
