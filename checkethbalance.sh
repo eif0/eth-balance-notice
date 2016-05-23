@@ -1,10 +1,26 @@
 #!/bin/bash
 export DISPLAY=:0
-balance="$(python3 ~/apps/checkethbalance.py)"
-presale_balance="706245000000000000001"
-if [ "$balance" != "$presale_balance" ]
+
+while [ "$1" != "" ]; do
+    case $1 in
+        -a | --address )        shift
+                                addr=$1
+                                ;;
+        -b | --balance )        shift
+				balance=$1
+                                ;;
+    esac
+    shift
+done
+
+path="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+script="python3 $path/checkethbalance.py -a "$addr
+current_balance=$($script)
+
+
+if [ "$balance" != "$current_balance" ]
 then
-	zenity --error --text="PRE SALE BALANCE MODIFIED!!!!"
+	zenity --error --text="BALANCE MODIFIED!!!!\nNEW BALANCE: "$balance
 fi
 
 exit 0
