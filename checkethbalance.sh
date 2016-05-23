@@ -19,7 +19,7 @@ current_balance=$($script)
 
 if [ "$balance" != "$current_balance" ]
 then
-	zenity --error --text="BALANCE MODIFIED!!!!\nNEW BALANCE: "$balance
+	zenity --error --text="BALANCE MODIFIED!!!!\nNEW BALANCE: "$current_balance
 fi
 
 exit 0
