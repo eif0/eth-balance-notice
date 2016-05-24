@@ -18,5 +18,9 @@ for code,param in opts:
 url='https://etherchain.org/api/account/'+account
 req = requests.get(url)
 content = req.json()
-balance = content["data"][0]['balance']
-print(balance)
+if content['data'] != []:
+	balance = content['data'][0]['balance']
+	print(balance)
+else:
+	print('ERROR')
+
