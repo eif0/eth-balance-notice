@@ -10,7 +10,7 @@
 
 
 * Usage __example__:
-	* ``$ ./checkethbalance.sh  -a 0xd0db456178206f5c4430fe005063903c3d7a49a7 -b 706245000000000000000``
+	* ``$ ./checkethbalance.sh  -a 0xd0db456178206f5c4430fe005063903c3d7a49a7 -b 706.245``
 
 
 #### Requeriments

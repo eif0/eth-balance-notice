@@ -20,7 +20,16 @@ req = requests.get(url)
 content = req.json()
 if content['data'] != []:
 	balance = content['data'][0]['balance']
-	print(balance)
+	str_balance = str(balance)
+
+	if (len(str_balance)<=18):
+		for i in (range(18-len(str_balance))):
+			str_balance="0"+str_balance
+		print(float("0."+str_balance))
+	else:
+		print(float(str_balance[:(len(str_balance)-18)]+"."+str_balance[(len(str_balance)-18):]))
+
+
 else:
 	print('ERROR')
 
